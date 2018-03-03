@@ -20,9 +20,14 @@
         </div>
         <div class="copyright">
             <p>
-                <a href="http://kravchina.com">kravchina.com</a> 2011 - 2018
+                <a href="http://kravchina.com">kravchina.com</a> 2011 - <span id="year"></span>
             </p>
         </div>
+        <script type="text/javascript">
+            var year = (new Date()).getFullYear();
+            year = year < 2018 ? 2018 : year;
+            document.getElementById("year").textContent = year;
+        </script>
 </body>
 </html>
 
