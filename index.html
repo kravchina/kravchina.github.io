@@ -12,6 +12,27 @@
     <style>
         *{background-color:#000;font-family:"Times New Roman",Times,serif;color:#d3d3d3}.title{position:fixed;bottom:30%;margin-left:100px}.title p{font-size:32px;margin:0;padding:0}.title .small{font-size:16px}.copyright{position:absolute;bottom:15px;text-align:center;width:100%;font-size:12px}.copyright a{font-size:16px;color:grey;margin-right:6px;text-decoration:underline}.copyright a:visited{color:grey}
     </style>
+    <script
+    src="https://js.sentry-cdn.com/7e28010174f0bec7dc65c10df35c5b4f.min.js"
+    crossorigin="anonymous">
+    </script>
+    <script type="text/javascript">
+        Sentry.onLoad(function() {
+        Sentry.init({
+            dsn: "https://7e28010174f0bec7dc65c10df35c5b4f@o4506105356288000.ingest.sentry.io/4506105366118400",
+            replaysSessionSampleRate: 1.0,
+            replaysOnErrorSampleRate: 1.0,
+
+            integrations: [
+                new Sentry.Replay({
+                    maskAllText: false,
+                    blockAllMedia: false,
+                    maskAllInputs: false,
+                }),
+            ],
+        });
+        });
+    </script>
 </head>
 <body>
         <div class="title">
